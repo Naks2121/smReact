@@ -1,0 +1,9 @@
+{
+    "editor.fontLigatures": false,
+    "workbench.colorCustomizations": {
+        "editor.background": "#1e1e1e",
+        "editorWhitespace.foreground": "#389",
+        "editor.selectionBackground": "#555",
+        "editor.selectionHighlightBackground": "#880000"
+    },
+}
