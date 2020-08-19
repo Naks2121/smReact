@@ -5,9 +5,6 @@ function Post(props) {
     return (
         <div className= {styles.item}>
             <img src='https://i.pinimg.com/736x/5a/9c/54/5a9c54d6bfde0a5c65e8539f36cf00fc.jpg' alt='avatar'/>
-            <div className= {styles.name}>
-                {props.name}
-            </div>
             <div>
                 {props.message}
             </div>

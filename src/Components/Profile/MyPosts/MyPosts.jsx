@@ -2,14 +2,30 @@ import React from 'react'
 import styles from './MyPosts.module.css'
 import Post from './Post/Post'
 
-function MyPosts() {
+function MyPosts(props) {
+    const postsElemens = props.posts.map(
+        p => <Post message={p.post} likes={p.likes}/>
+    );
+
+    const newPostElement = React.createRef();
+    
+    function AddPost() {
+        const  text = newPostElement.current.value;
+        alert(text);
+    }
+
     return (
         <div className= {styles.posts}>
-            <textarea name="add" cols="30" rows="2"></textarea>
-            <button type="submit">Add post</button>
-            <Post message='Hi, how are you?' name='Kate' likes='3'/>
-            <Post  message='My second post!' name='Yennefer' likes='11'/>
-            <Post message='Klark Kent is superman!!!' name='Triss' likes='10' />
+            <h3>My posts</h3>
+            <div>
+                <textarea ref={newPostElement} cols="30" rows="2"></textarea>
+            </div>
+            <div>
+                <button onClick={ AddPost }>Add post</button>
+            </div>
+            <div className={styles.posts}>
+                { postsElemens }
+            </div>
         </div>
     )
 }

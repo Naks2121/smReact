@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './Profile.module.css'
 import Posts from './MyPosts/MyPosts'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
-function Profile() {
+function Profile(props) {
     return (
         <div className={styles.content}>
-            <img src="https://wallpaperaccess.com/full/6313.jpg" alt="profile_img" />
-            <Posts />
+            <ProfileInfo /> 
+            <Posts posts={props.state.posts} />
         </div>
     )
 }
